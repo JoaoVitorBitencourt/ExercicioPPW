@@ -1,7 +1,8 @@
-import dados from './gerador_jogador.json';
-import express from 'express';
+const express = require('express');
 const app = express();
 const PORTA = 8080
+const dados = require('./gerador_jogador.json');
+
 
 app.listen(PORTA, () => {
     console.log(`Rodando na porta ${PORTA}`);
