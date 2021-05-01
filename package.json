@@ -1,0 +1,16 @@
+{
+  "name": "ex08",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --experimental-json-modules index.js"
+  },
+  "author": "Joao Vitor",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "require": "^2.4.20"
+  }
+}
