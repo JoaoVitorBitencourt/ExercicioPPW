@@ -38,5 +38,5 @@ app.use('/gerador', function (req, res) {
         mensagem: mensagem_jogador
 
     }*/
-    res.send(gera_jogador());
+    res.send(gera_jogador(idade));
 })
