@@ -18,7 +18,7 @@ function gera_jogador(idade) {
     let ger_sob = Math.floor(Math.random() * (0 + 28) + 0);
     let ger_pos = Math.floor(Math.random() * (0 + 8) + 0);
     let ger_clube = Math.floor(Math.random() * (0 + 20) + 0);
-    let mensagem_jogador = `${dados.nome[ger_nome]} ${dados.sobrenome[ger_sob]} é um futebolista brasileiro de ${idade} anos que atua como ${dados.posicao[ger_pos]}. Atualmente defende o ${dados.clube[ger_clube]}.`;
+    let mensagem_jogador = `${dados.nome[ger_nome]} ${dados.sobrenome[ger_sob]} é um futebolista brasileiro de ${texto} anos que atua como ${dados.posicao[ger_pos]}. Atualmente defende o ${dados.clube[ger_clube]}.`;
     return mensagem_jogador;
 }
 
