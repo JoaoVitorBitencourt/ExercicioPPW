@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORTA = 8080
+const PORTA = process.env.port||8080;
 const dados = require('./gerador_jogador.json');
 
 
