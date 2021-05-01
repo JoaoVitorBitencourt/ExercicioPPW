@@ -1,12 +1,7 @@
 const express = require('express');
 const app = express();
-const PORTA = process.env.port||8080;
+const PORTA = process.env.PORT||8080;
 const dados = require('./gerador_jogador.json');
-
-
-app.listen(PORTA, () => {
-    console.log(`Rodando na porta ${PORTA}`);
-})
 
 function gera_jogador(idade) {
     var texto;
@@ -39,4 +34,8 @@ app.use('/gerador', function (req, res) {
 
     }*/
     res.send(gera_jogador(idade));
-})
+});
+
+app.listen(PORTA, () => {
+    console.log(`Rodando na porta ${PORTA}`);
+});
