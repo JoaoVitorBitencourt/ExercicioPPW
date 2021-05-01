@@ -6,17 +6,13 @@ const app = express();
 const PORTA = process.env.PORT || 8080;
 
 async function geraCarro() {
-    let resposta = await axios.get('http://fipeapi.appspot.com/api/1/carros/veiculos/21.json');
+    let resposta = await axios.get('http://fipeapi.appspot.com/api/1/carros/veiculos/10.json');
     let data = resposta.data;
     return data;
 }
 
-function geraID() {
-    let id = Math.floor(Math.random() * (0 + 18) + 0);
-}
-
 app.use('/', function (req, res) {
-    let id = geraID();
+    let id = req.query.id;
     let carro = geraCarro();
     carro.then(resposta => {
         resposta.forEach(element => {
@@ -25,6 +21,7 @@ app.use('/', function (req, res) {
                 res.send(element.fipe_name); 
             }
         });
+        
     })
 });
 
