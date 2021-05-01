@@ -15,7 +15,7 @@ function geraID() {
     let id = Math.floor(Math.random() * (0 + 18) + 0);
 }
 
-app.use('/gerador', function (req, res) {
+app.use('/', function (req, res) {
     let id = geraID();
     let carro = geraCarro();
     carro.then(resposta => {
