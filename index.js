@@ -6,7 +6,7 @@ const app = express();
 const PORTA = process.env.PORT || 8080;
 
 async function geraCarro() {
-    let resposta = await axios.get('http://fipeapi.appspot.com/api/1/carros/veiculos/10.json');
+    let resposta = await axios.get('http://fipeapi.appspot.com/api/1/carros/veiculos/21.json');
     let data = resposta.data;
     return data;
 }
