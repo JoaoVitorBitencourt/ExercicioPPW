@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "Joao Vitor",
+  "author": "Joao Vitor e Flávio",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
