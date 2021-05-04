@@ -1,7 +1,6 @@
 import express from 'express';
 import axios from 'axios';
 
-const api = axios.create();
 const app = express();
 const PORTA = process.env.PORT || 8080;
 
@@ -12,16 +11,14 @@ async function geraCarro() {
 }
 
 app.use('/', function (req, res) {
-    let id = req.query.id;
     let carro = geraCarro();
     carro.then(resposta => {
+        let count = 0;
         resposta.forEach(element => {
-            if(element.id == id){
-                console.log(element.fipe_name);
-                res.send(element.fipe_name); 
-            }
+            count ++;
         });
-        
+        let index = Math.floor(Math.random() * (count - 0) + 0);
+        res.send(resposta[index].name)
     })
 });
 
